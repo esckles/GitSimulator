@@ -1,0 +1,7 @@
+import React from "react";
+
+const EightTeenGitArchieve = () => {
+  return <div>EightTeenGitArchieve</div>;
+};
+
+export default EightTeenGitArchieve;

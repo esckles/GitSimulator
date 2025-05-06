@@ -1,0 +1,7 @@
+import React from "react";
+
+const SixRevertingandResetting = () => {
+  return <div>SixRevertingandResetting</div>;
+};
+
+export default SixRevertingandResetting;

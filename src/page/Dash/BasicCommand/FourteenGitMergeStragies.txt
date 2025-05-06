@@ -1,0 +1,7 @@
+import React from "react";
+
+const FourteenGitMergeStragies = () => {
+  return <div>FourteenGitMergeStragies</div>;
+};
+
+export default FourteenGitMergeStragies;

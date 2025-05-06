@@ -1,0 +1,7 @@
+import React from "react";
+
+const EightTags = () => {
+  return <div>EightTags</div>;
+};
+
+export default EightTags;

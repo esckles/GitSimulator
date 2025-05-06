@@ -1,0 +1,54 @@
+import React, { useState } from "react";
+// import "reactflow/dist/style.css";
+
+// const GitCommandDescription = [
+//   {
+//     Git: "Git init",
+//     GitTitle: "Initialize a new Git repository in the current directory",
+//   },
+//   {
+//     Git: "Git Clone <repo_url>",
+//     GitTitle: "Clones a repository from a remote URL to your local machine",
+//   },
+//   {
+//     Git: "git status",
+//     GitTitle:
+//       "Shows the working directory status (which files are modified,staged,etc)",
+//   },
+//   {
+//     Git: "git add",
+//     GitTitle: "Stages a file or files to be committed",
+//   },
+//   {
+//     Git: 'git commit -m "messaage" ',
+//     GitTitle: "Commit staged changes to the local repository with message",
+//   },
+//   {
+//     Git: "git push",
+//     GitTitle: "Pushes commited changes to the remote repository.",
+//   },
+//   {
+//     Git: "git pull",
+//     GitTitle:
+//       "Fetches and merges changes from the remote repository to your local working directory.",
+//   },
+//   {
+//     Git: "git fetch",
+//     GitTitle:
+//       "Downloads object and refs from another repository (without merging)",
+//   },
+//   {
+//     Git: "git merge",
+//     GitTitle:
+//       "Merges changes from the specified branch into the current branch",
+//   },
+//   {
+//     Git: "git log",
+//     GitTitle: "Shows the commit history of the repository.",
+//   },
+//   {
+//     Git: "git diff",
+//     GitTitle:
+//       "Shows the diffrences between your working directory and the index (staged changes)",
+//   },
+// ];

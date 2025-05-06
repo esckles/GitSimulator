@@ -1,0 +1,7 @@
+import React from "react";
+
+const ThreeRemotesCommands = () => {
+  return <div>ThreeRemotesCommands</div>;
+};
+
+export default ThreeRemotesCommands;

@@ -1,0 +1,229 @@
+// import React from "react";
+// import { Link } from "react-router-dom";
+
+import { Link } from "react-router-dom";
+
+// const Devops = () => {
+//   return (
+//     <div className="w-full  bg-blue-600 mt-10 flex flex-col">
+//       <div className="w-full  items-center justify-start bg-green-300 flex-col">
+//         <div className="flex flex-col">
+//           <div className="w-full">Basic</div>
+//           <div className="flex">
+//             <div className="h-[20px] w-[2px] bg-black ml-[38.2px]"></div>
+//             <div className="w-[403px] h-[20px] border-t-2 border-black border-dotted"></div>
+//             <div className="h-[20px] w-[2px] bg-black "></div>
+//             <div className="w-[100%] h-[20px] border-t-2 border-black"></div>
+//           </div>
+//         </div>
+//         <div className="flex">
+//           <Link
+//             to="/devops/one"
+//             className="w-[45px] h-[40px] rounded-md bg-blue-500 ml-4 cursor-pointer items-center justify-center flex"
+//           >
+//             1
+//           </Link>
+//           <Link
+//             to="/devops/two"
+//             className="w-[45px] h-[40px] rounded-md bg-blue-500 ml-4 cursor-pointer items-center justify-center flex"
+//           >
+//             2
+//           </Link>
+//           <Link
+//             to="/devops/three"
+//             className="w-[45px] h-[40px] rounded-md bg-blue-500 ml-4 cursor-pointer items-center justify-center flex"
+//           >
+//             3
+//           </Link>
+//           <Link
+//             to="/devops/four"
+//             className="w-[45px] h-[40px] rounded-md bg-blue-500 ml-4 cursor-pointer items-center justify-center flex"
+//           >
+//             4
+//           </Link>
+//           <Link
+//             to="/devops/five"
+//             className="w-[45px] h-[40px] rounded-md bg-blue-500 ml-4 cursor-pointer items-center justify-center flex"
+//           >
+//             5
+//           </Link>
+//         </div>
+//       </div>
+//       <div className="w-full  items-center justify-start bg-green-300 flex-col">
+//         <div className="flex flex-col">
+//           <div className="w-full">Basic</div>
+//           <div className="flex">
+//             <div className="h-[20px] w-[2px] bg-black ml-[38.2px]"></div>
+//             <div className="w-[403px] h-[20px] border-t-2 border-black border-dotted"></div>
+//             <div className="h-[20px] w-[2px] bg-black "></div>
+//             <div className="w-[100%] h-[20px] border-t-2 border-black"></div>
+//           </div>
+//         </div>
+//         <div className="flex">
+//           <Link
+//             to="/devops/six"
+//             className="w-[45px] h-[40px] rounded-md bg-blue-500 ml-4 cursor-pointer items-center justify-center flex"
+//           >
+//             6
+//           </Link>
+//           <Link
+//             to="/devops/seven"
+//             className="w-[45px] h-[40px] rounded-md bg-blue-500 ml-4 cursor-pointer items-center justify-center flex"
+//           >
+//             7
+//           </Link>
+//           <Link
+//             to="/devops/eight"
+//             className="w-[45px] h-[40px] rounded-md bg-blue-500 ml-4 cursor-pointer items-center justify-center flex"
+//           >
+//             8
+//           </Link>
+//           <Link
+//             to="/devops/nine"
+//             className="w-[45px] h-[40px] rounded-md bg-blue-500 ml-4 cursor-pointer items-center justify-center flex"
+//           >
+//             9
+//           </Link>
+//           <Link
+//             to="/devops/ten"
+//             className="w-[45px] h-[40px] rounded-md bg-blue-500 ml-4 cursor-pointer items-center justify-center flex"
+//           >
+//             10
+//           </Link>
+//         </div>
+//       </div>
+//       <div className="w-full  items-center justify-start bg-green-300 flex-col">
+//         <div className="flex flex-col">
+//           <div className="w-full">Basic</div>
+//           <div className="flex">
+//             <div className="h-[20px] w-[2px] bg-black ml-[38.2px]"></div>
+//             <div className="w-[403px] h-[20px] border-t-2 border-black border-dotted"></div>
+//             <div className="h-[20px] w-[2px] bg-black "></div>
+//             <div className="w-[100%] h-[20px] border-t-2 border-black"></div>
+//           </div>
+//         </div>
+//         <div className="flex">
+//           <Link
+//             to="/devops/eleven"
+//             className="w-[45px] h-[40px] rounded-md bg-blue-500 ml-4 cursor-pointer items-center justify-center flex"
+//           >
+//             11
+//           </Link>
+//           <Link
+//             to="/devops/twelve"
+//             className="w-[45px] h-[40px] rounded-md bg-blue-500 ml-4 cursor-pointer items-center justify-center flex"
+//           >
+//             12
+//           </Link>
+//           <Link
+//             to="/devops/thirteen"
+//             className="w-[45px] h-[40px] rounded-md bg-blue-500 ml-4 cursor-pointer items-center justify-center flex"
+//           >
+//             13
+//           </Link>
+//           <Link
+//             to="/devops/fourteen"
+//             className="w-[45px] h-[40px] rounded-md bg-blue-500 ml-4 cursor-pointer items-center justify-center flex"
+//           >
+//             14
+//           </Link>
+//           <Link
+//             to="/devops/fifteen"
+//             className="w-[45px] h-[40px] rounded-md bg-blue-500 ml-4 cursor-pointer items-center justify-center flex"
+//           >
+//             15
+//           </Link>
+//         </div>
+//       </div>
+//       <div className="w-full  items-center justify-start bg-green-300 flex-col mb-3">
+//         <div className="flex flex-col">
+//           <div className="w-full">Basic</div>
+//           <div className="flex">
+//             <div className="h-[20px] w-[2px] bg-black ml-[38.2px]"></div>
+//             <div className="w-[403px] h-[20px] border-t-2 border-black border-dotted"></div>
+//             <div className="h-[20px] w-[2px] bg-black "></div>
+//             <div className="w-[100%] h-[20px] border-t-2 border-black"></div>
+//           </div>
+//         </div>
+//         <div className="flex">
+//           <Link
+//             to="/devops/sixteen"
+//             className="w-[45px] h-[40px] rounded-md bg-blue-500 ml-4 cursor-pointer items-center justify-center flex"
+//           >
+//             16
+//           </Link>
+//           <Link
+//             to="/devops/seventeen"
+//             className="w-[45px] h-[40px] rounded-md bg-blue-500 ml-4 cursor-pointer items-center justify-center flex"
+//           >
+//             17
+//           </Link>
+//           <Link
+//             to="/devops/eighteen"
+//             className="w-[45px] h-[40px] rounded-md bg-blue-500 ml-4 cursor-pointer items-center justify-center flex"
+//           >
+//             18
+//           </Link>
+//           <Link
+//             to="/devops/nineteen"
+//             className="w-[45px] h-[40px] rounded-md bg-blue-500 ml-4 cursor-pointer items-center justify-center flex"
+//           >
+//             19
+//           </Link>
+//           <Link
+//             to="/devops/twenty"
+//             className="w-[45px] h-[40px] rounded-md bg-blue-500 ml-4 cursor-pointer items-center justify-center flex"
+//           >
+//             20
+//           </Link>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Devops;
+
+const section = [
+  { title: "Basic", start: 1 },
+  { title: "Basic", start: 6 },
+  { title: "Basic", start: 11 },
+  { title: "Basic", start: 16 },
+];
+
+const Devops = () => {
+  return (
+    <div className="w-full lg:w-[100%] md:w-[100%] p-4 bg-red-600 mt-10 flex flex-col gap-6">
+      {section.map((section, i) => (
+        <div key={i} className="bg-green-400 p-4 rounded-md shadow">
+          <div className="flex flex-col gap-2">
+            <h2 className="text-lg font-semibold">{section.title}</h2>
+            <div className="flex items-center">
+              <div className="h-5 w-[2px] bg-black ml-10"></div>
+              <div className="flex-1 h-[1px] border-t-2 border-dotted border-black"></div>
+              <div className="h-5 bg-black w-[2px]"></div>
+              <div className=" flex-1 h-1[1px] bordert-t-2 border-black"></div>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-3 mt-3">
+            {[...Array(5)].map((_, j) => {
+              const num = section.start + j;
+              return (
+                <Link
+                  to={`/basics/${num <= 20 ? num : ""}`}
+                  key={j}
+                  className="w-11 h-11 rounded-md bg-blue-500 text-white flex items-center justify-center hover:bg-blue-700 transition"
+                >
+                  {num}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Devops;

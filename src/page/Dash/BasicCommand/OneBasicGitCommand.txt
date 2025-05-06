@@ -1,0 +1,61 @@
+import React, { useState } from "react";
+import Terminal from "../../../components/Terminal";
+
+const OneBasicGitCommands = () => {
+  const [output, setOutput] = useState([]);
+  const [inputValue, setInputValue] = useState("");
+
+  const allowedCommands = [
+    "git init",
+    "git status",
+    "git add .",
+    "git commit -m 'initial commit'",
+  ];
+
+  const handleCommand = () => {
+    let newOutput = [...output];
+    const trimmedInput = inputValue.trim();
+
+    if (allowedCommands.includes(trimmedInput)) {
+      switch (trimmedInput) {
+        case "git init":
+          newOutput.push("Initialized empty Git repository.");
+          break;
+        case "git status":
+          newOutput.push("No commits yet. Everything is untracked.");
+          break;
+        case "git add .":
+          newOutput.push("Staged all files for commit.");
+          break;
+        case "git commit -m 'initial commit'":
+          newOutput.push("Committed with message: 'initial commit'.");
+          break;
+      }
+    } else {
+      newOutput.push("Command not recognized. Please enter a valid command.");
+    }
+
+    setOutput(newOutput);
+    setInputValue("");
+  };
+
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-bold mb-4">
+        Stage One: Initialize a Repository
+      </h2>
+      <p className="mb-4 text-gray-700">
+        Start your Git journey by initializing a new repository and making your
+        first commit.
+      </p>
+      <Terminal
+        inputValue={inputValue}
+        setInputValue={setInputValue}
+        output={output}
+        handleCommand={handleCommand}
+      />
+    </div>
+  );
+};
+
+export default OneBasicGitCommands;

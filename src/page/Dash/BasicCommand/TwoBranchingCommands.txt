@@ -1,0 +1,113 @@
+import { current } from "@reduxjs/toolkit";
+import React, { useState } from "react";
+
+const TwoBranchingCommands = () => {
+  const [input, setInput] = useState("");
+  const [logs, setLogs] = useState([]);
+  const [commits, setCommits] = useState([]);
+  const [initialized, setintialized] = useState(false);
+  const [branches, setBranches] = useState([{ name: "main", commits: [] }]);
+  const [currentBranch, setCurrentBranch] = useState("main");
+  const [commitCount, setCommitCount] = useState(0);
+  const handleCommand = () => {
+    let cmd = input.trim();
+    let newLogs = [...logs, `$ ${cmd}`];
+
+    if (cmd === "clear") {
+      setLogs([]);
+      setInput("");
+      return;
+    }
+    if (cmd === "reset") {
+      setLogs([]);
+      setCommits([]);
+      setintialized(false);
+      setBranches([{ name: "main", commits: [] }]);
+      setCurrentBranch("main");
+      setCommitCount(0);
+      setInput("");
+      return;
+    }
+    if (cmd === "git init") {
+      setintialized(true);
+      newLogs.push("Initilized empty Git repository");
+    } else if (cmd.startsWith("git commit")) {
+      if (!initialized) {
+        newLogs.push("Repository not initialized. Run git init first");
+      } else {
+        const newCommit = {
+          id: commitCount + 1,
+          message: `commit-${commitCount + 1}`,
+        };
+        setCommitCount(commitCount + 1);
+        setCommits([...commits, newCommit]);
+        const updatedBranches = branches.map((branch) => {
+          if (branch.name === currentBranch) {
+            return { ...branch, commits: [...branch.commits, newCommit] };
+          }
+          return branch;
+        });
+        setBranches(updatedBranches);
+        newLogs.push(` Commited: ${newCommit.message}`);
+      }
+    } else if (cmd.startsWith("git branch ")) {
+      const parts = cmd.split(" ");
+      const newBranchName = parts[2];
+      if (!newBranchName) {
+        newLogs.push("Please provide a branch name, e.g., git branch dev");
+      } else {
+        const exits = branches.find((b) => b.name === newBranchName);
+        if (exits) {
+          newLogs.push(`Branch ${newBranchName} already exists.`);
+        } else {
+          setBranches([
+            ...branches,
+            {
+              name: newBranchName,
+              commits: [],
+            },
+          ]);
+          newLogs.push(`Branch ${newBranchName} created.`);
+        }
+      }
+    } else if (cmd.startsWith("git checkout")) {
+      const parts = cmd.split(" ");
+      const branchName = parts[2];
+      const exists = branches.find((b) => b.name === branchName);
+      if (exists) {
+        setCurrentBranch(branchName);
+        newLogs.push(`Switch to branch '${branchName}'`);
+      } else {
+        newLogs.push(`branch'${branchName}' does not exist.`);
+      }
+    } else {
+      newLogs.push(
+        "Unknown command. Try git init git commit, git branch <name> git checkout <name>"
+      );
+    }
+    setLogs(newLogs);
+    setInput("");
+  };
+  return (
+    <div className="max-w-4xl mx-auto p-6">
+      <h1 className="text-3xl font-bold mb-4 text-center">
+        🚀❤️ Stage 1 Playground: Git Command Simulator
+      </h1>
+      <div className="bg-black text-green-400 font-mono p-4 rounded-xl mb-6">
+        {logs.map((log, idx) => (
+          <div key={idx}>{log}</div>
+        ))}
+        <input
+          type="text"
+          className="bg-black border-0 outline-none text-green-300 w-full mt-2"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && handleCommand()}
+          placeholder="$ type a git command..."
+        />
+      </div>
+    </div>
+  );
+};
+
+export default TwoBranchingCommands;
