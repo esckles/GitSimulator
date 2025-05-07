@@ -38,7 +38,7 @@ const Otp = () => {
 
   return (
     <div>
-      <div className="w-full h-screen flex items-center justify-center bg-purple-700 flex-col">
+      <div className="w-full h-screen flex items-center justify-center bg-[#111827] flex-col">
         <Toaster />
         <div className="w-[80%] md:w-[40%] lg:w-[25%] rounded-md shadow-lg bg-white p-[3%]">
           <form onSubmit={handleSubmit}>
