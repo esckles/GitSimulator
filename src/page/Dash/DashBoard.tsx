@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable prefer-const */
 // const DashBoard = () => {
 //   return (
@@ -9,10 +10,8 @@
 //   );
 // };
 
-import React, { useContext, useEffect, useState } from "react";
+import React, { useState } from "react";
 import { CgMoon, CgSun } from "react-icons/cg";
-import { GlobalContext } from "../../global/globalProvider";
-import { ReadOneUSerAccount } from "../../api/api";
 
 // export default DashBoard;
 
@@ -108,10 +107,12 @@ const GitCommandDescription = [
 const DashBoard = () => {
   // const { userID }: any = useContext(GlobalContext);
   const [input, setInput] = useState("");
-  const [logs, setLogs] = useState([]);
-  const [commits, setCommits] = useState([]);
+  const [logs, setLogs] = useState<string[]>([]);
+  const [commits, setCommits] = useState<{ id: number; message: string }[]>([]);
   const [initialized, setInitialized] = useState(false);
-  const [branches, setBranches] = useState([{ name: "main", commits: [] }]);
+  const [branches, setBranches] = useState<
+    { name: string; commits: { id: number; message: string }[] }[]
+  >([{ name: "main", commits: [] }]);
   const [currentBranch, setCurrentBranch] = useState("main");
   const [commitCount, setCommitCount] = useState(0);
   const [darkMode, setdarkMode] = useState<boolean>(false);
@@ -246,7 +247,7 @@ const DashBoard = () => {
           branch.commits
             .slice()
             .reverse()
-            .forEach((c) => newLogs.push(`commit-${c.id}: ${c.message}`));
+            .forEach((c: any) => newLogs.push(`commit-${c.id}: ${c.message}`));
         } else {
           newLogs.push("No commits yet.");
         }
@@ -263,7 +264,7 @@ const DashBoard = () => {
       if (mergeBranch && current && mergeBranchName !== currentBranch) {
         const mergedCommits = [...current.commits, ...mergeBranch.commits];
         const uniqueCommits = Array.from(
-          new Set(mergedCommits.map((c) => c.message))
+          new Set(mergedCommits.map((c: any) => c.message))
         ).map((msg, i) => ({ id: i + 1, message: msg }));
         current.commits = uniqueCommits;
         newLogs.push(
@@ -396,7 +397,7 @@ const DashBoard = () => {
                 🌿 Branch: {branch.name}
               </h2>
               <ul className="text-[9px] text-gray-600 sm:text-[11px] md:text-[13px]">
-                {branch.commits.map((c, i) => (
+                {branch.commits.map((c: any, i) => (
                   <li key={i}>🔹 {c.message}</li>
                 ))}
               </ul>

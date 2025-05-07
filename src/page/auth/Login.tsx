@@ -7,11 +7,11 @@ import { LoginUSerAccount, VerifyUSerAccount } from "../../api/api";
 import { CgSpinner } from "react-icons/cg";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { jwtDecode } from "jwt-decode";
-import { GlobalContext } from "../../global/globalProvider";
+// import { GlobalContext } from "../../global/globalProvider";
 // import { jwtDecode } from "jwt-decode";
 
 const Login = () => {
-  const { setuserID }: any = useContext(GlobalContext);
+  // const { setuserID }: any = useContext(GlobalContext);
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [loading, setloading] = useState<boolean>(false);
