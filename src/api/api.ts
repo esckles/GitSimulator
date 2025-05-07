@@ -2,8 +2,9 @@
 import axios from "axios";
 
 // const URL: any = "http://localhost:2525/api_v1";
+const URL: any = `https://gitsimulatorbe.onrender.com`;
 // const URL: string = process.env.VITE_API_URL || "http://localhost:2525/api_v1";
-const URL: any = import.meta.env.VITE_API_URL || "http://localhost:2525/api_v1";
+// const URL: any = import.meta.env.VITE_API_URL || "http://localhost:2525/api_v1";
 
 export const RegisterUSerAccount = async (data: any) => {
   try {
