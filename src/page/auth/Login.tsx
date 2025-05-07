@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import toast, { Toaster } from "react-hot-toast";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { LoginUSerAccount, VerifyUSerAccount } from "../../api/api";
 import { CgSpinner } from "react-icons/cg";
