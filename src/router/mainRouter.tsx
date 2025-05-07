@@ -111,12 +111,6 @@ export const mainRouter = createBrowserRouter([
         element: <ForgetPasNT />,
       },
       {
-        index: true,
-        path: "change-ps",
-        element: <ChangePas />,
-      },
-      {
-        index: true,
         path: "change-ps/:id",
         element: <ChangePas />,
       },
