@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import toast, { Toaster } from "react-hot-toast";
-import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { LoginUSerAccount, VerifyUSerAccount } from "../../api/api";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { LoginUSerAccount } from "../../api/api";
 import { CgSpinner } from "react-icons/cg";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { jwtDecode } from "jwt-decode";
@@ -16,19 +16,19 @@ const Login = () => {
   const [password, setPassword] = useState<string>("");
   const [loading, setloading] = useState<boolean>(false);
   const [openpassword, setclosepassword] = useState(false);
-  const { token } = useParams();
+  // const { token } = useParams();
   const navigate = useNavigate();
 
   const handleopen = () => {
     setclosepassword(!openpassword);
   };
 
-  useEffect(() => {
-    if (token) {
-      const decoded: any = jwtDecode(token!);
-      VerifyUSerAccount(decoded?.id);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (token) {
+  //     const decoded: any = jwtDecode(token!);
+  //     VerifyUSerAccount(decoded?.id);
+  //   }
+  // }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

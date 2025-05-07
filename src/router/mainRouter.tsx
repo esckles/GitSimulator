@@ -13,6 +13,7 @@ import DashLayout from "../layout/DashLayout";
 import DashBoard from "../page/Dash/DashBoard";
 // import BackLogin from "../page/auth/BackLogin";
 import PrivateRoute from "./PrivateRoute";
+import Otp from "../page/auth/Otp";
 
 // import Basic from "../page/Dash/Basic";
 // import Devops from "../page/Dash/Devops";
@@ -85,16 +86,16 @@ export const mainRouter = createBrowserRouter([
         path: "register-nt",
         element: <RegisterNotification />,
       },
-      // {
-      //   index: true,
-      //   path: "otp",
-      //   element: <Otp />,
-      // },
-      // {
-      //   index: true,
-      //   path: "otp/:id",
-      //   element: <Otp />,
-      // },
+      {
+        index: true,
+        path: "otp",
+        element: <Otp />,
+      },
+      {
+        index: true,
+        path: "otp/:id",
+        element: <Otp />,
+      },
       // {
       //   index: true,
       //   path: "backlogin",
@@ -103,11 +104,6 @@ export const mainRouter = createBrowserRouter([
       {
         index: true,
         path: "login",
-        element: <Login />,
-      },
-      {
-        index: true,
-        path: "login/:token",
         element: <Login />,
       },
       {
