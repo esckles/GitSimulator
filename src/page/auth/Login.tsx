@@ -36,6 +36,7 @@ const Login = () => {
 
     LoginUSerAccount({ email, password })
       .then((res) => {
+        setloading(false);
         if (res.status === 201) {
           const getID: any = jwtDecode(res.data!);
           localStorage.setItem("authy", JSON.stringify(getID?.id));

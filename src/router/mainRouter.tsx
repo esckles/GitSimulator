@@ -87,12 +87,6 @@ export const mainRouter = createBrowserRouter([
         element: <RegisterNotification />,
       },
       {
-        index: true,
-        path: "otp",
-        element: <Otp />,
-      },
-      {
-        index: true,
         path: "otp/:id",
         element: <Otp />,
       },
